@@ -1,0 +1,9 @@
+Matrix-A
+1 2
+2 1
+Matrix-B
+3 4
+4 5
+Solution
+11 14
+10 13
