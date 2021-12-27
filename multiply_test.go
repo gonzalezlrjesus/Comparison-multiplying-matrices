@@ -19,7 +19,7 @@ func BenchmarkMultiplyWithoutConcurrency_Size2(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -34,7 +34,7 @@ func BenchmarkMultiplyConcurrencyPerRow_Size2(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -49,7 +49,7 @@ func BenchmarkMultiplyConcurrencyPerElement_Size2(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -66,7 +66,7 @@ func BenchmarkMultiplyWithoutConcurrency_Size10(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -81,7 +81,7 @@ func BenchmarkMultiplyConcurrencyPerRow_Size10(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -96,7 +96,7 @@ func BenchmarkMultiplyConcurrencyPerElement_Size10(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -113,7 +113,7 @@ func BenchmarkMultiplyWithoutConcurrency_Size50(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -128,7 +128,7 @@ func BenchmarkMultiplyConcurrencyPerRow_Size50(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -143,7 +143,7 @@ func BenchmarkMultiplyConcurrencyPerElement_Size50(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -160,7 +160,7 @@ func BenchmarkMultiplyWithoutConcurrency_Size100(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -175,7 +175,7 @@ func BenchmarkMultiplyConcurrencyPerRow_Size100(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -190,7 +190,7 @@ func BenchmarkMultiplyConcurrencyPerElement_Size100(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -206,7 +206,7 @@ func BenchmarkMultiplyWithoutConcurrency_Size2000(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -221,7 +221,7 @@ func BenchmarkMultiplyConcurrencyPerRow_Size2000(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -236,7 +236,7 @@ func BenchmarkMultiplyConcurrencyPerElement_Size2000(b *testing.B) {
 	}
 
 	for i := 0; i < b.N; i++ {
-		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, &matrixC)
+		MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, matrixC)
 	}
 }
 
@@ -252,7 +252,7 @@ func TestMultiplyWithoutConcurrency(t *testing.T) {
 		matrixC[key] = make([]int, sizematrix)
 	}
 
-	MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, &matrixC)
+	MultiplyWithoutConcurrency(sizematrix, matrixA, matrixB, matrixC)
 
 	for indRow := 0; indRow < sizematrix; indRow++ {
 		if !reflect.DeepEqual(matrixSolution[indRow], matrixC[indRow]) {
@@ -272,7 +272,7 @@ func TestMultiplyConcurrencyPerRow(t *testing.T) {
 		matrixC[key] = make([]int, sizematrix)
 	}
 
-	MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, &matrixC)
+	MultiplyConcurrencyPerRow(sizematrix, matrixA, matrixB, matrixC)
 
 	for indRow := 0; indRow < sizematrix; indRow++ {
 		if !reflect.DeepEqual(matrixSolution[indRow], matrixC[indRow]) {
@@ -292,7 +292,7 @@ func TestMultiplyConcurrencyPerElement(t *testing.T) {
 		matrixC[key] = make([]int, sizematrix)
 	}
 
-	MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, &matrixC)
+	MultiplyConcurrencyPerElement(sizematrix, matrixA, matrixB, matrixC)
 
 	for indRow := 0; indRow < sizematrix; indRow++ {
 		if !reflect.DeepEqual(matrixSolution[indRow], matrixC[indRow]) {

@@ -5,7 +5,7 @@ import (
 )
 
 // MultiplyWithoutConcurrency .
-func MultiplyWithoutConcurrency(sizematrix int, matrixA [][]int, matrixB [][]int, matrixC *[][]int) {
+func MultiplyWithoutConcurrency(sizematrix int, matrixA [][]int, matrixB [][]int, matrixC [][]int) {
 	for i := 0; i < sizematrix; i++ {
 		for j := 0; j < sizematrix; j++ {
 			sum := 0
@@ -13,13 +13,13 @@ func MultiplyWithoutConcurrency(sizematrix int, matrixA [][]int, matrixB [][]int
 				sum += matrixA[i][k] * matrixB[k][j]
 			}
 
-			(*matrixC)[i][j] = sum
+			matrixC[i][j] = sum
 		}
 	}
 }
 
 // MultiplyConcurrencyPerRow .
-func MultiplyConcurrencyPerRow(sizematrix int, matrixA [][]int, matrixB [][]int, matrixC *[][]int) {
+func MultiplyConcurrencyPerRow(sizematrix int, matrixA [][]int, matrixB [][]int, matrixC [][]int) {
 	var wg sync.WaitGroup
 
 	for i := 0; i < sizematrix; i++ {
@@ -34,7 +34,7 @@ func MultiplyConcurrencyPerRow(sizematrix int, matrixA [][]int, matrixB [][]int,
 					sum += matrixA[i][k] * matrixB[k][j]
 				}
 
-				(*matrixC)[i][j] = sum
+				matrixC[i][j] = sum
 			}
 		}(i)
 	}
@@ -42,7 +42,7 @@ func MultiplyConcurrencyPerRow(sizematrix int, matrixA [][]int, matrixB [][]int,
 }
 
 // MultiplyConcurrencyPerElement .
-func MultiplyConcurrencyPerElement(sizematrix int, matrixA [][]int, matrixB [][]int, matrixC *[][]int) {
+func MultiplyConcurrencyPerElement(sizematrix int, matrixA [][]int, matrixB [][]int, matrixC [][]int) {
 	var wg sync.WaitGroup
 
 	for i := 0; i < sizematrix; i++ {
@@ -57,7 +57,7 @@ func MultiplyConcurrencyPerElement(sizematrix int, matrixA [][]int, matrixB [][]
 					sum += matrixA[i][k] * matrixB[k][j]
 				}
 
-				(*matrixC)[i][j] = sum
+				matrixC[i][j] = sum
 			}(i, j)
 		}
 	}
