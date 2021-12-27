@@ -19,64 +19,34 @@ ___
     cpu: Intel(R) Core(TM) i7-10750H CPU @ 2.60GHz
 
 ### General results table
-<table>
-  <tr>
-    <td>Docker Container</td>
-     <td>Laptop</td>
-  </tr>
-  <tr>
-    <td><img src="resources/tests-docker.png" width=550 height=480></td>
-    <td><img src="resources/tests-laptop.png" width=550 height=480></td>
-  </tr>
- </table>
+####  Docker Container
+![test-docker](resources/tests-docker.png "Test-docker")
+####  Laptop
+![Test-laptop](resources/tests-laptop.png "Test-laptop")
 
 ### Average amount of time each iteration took to complete (nanoseconds per operation)
-<table>
-  <tr>
-    <td>Docker Container</td>
-     <td>Laptop</td>
-  </tr>
-  <tr>
-    <td><img src="resources/amount-time-docker.png" width=550 height=480></td>
-    <td><img src="resources/amount-time-laptop.png" width=550 height=480></td>
-  </tr>
- </table>
+####  Docker Container
+![amount-time-docker](resources/amount-time-docker.png "amount-time-docker")
+####  Laptop
+![amount-time-laptop](resources/amount-time-laptop.png "amount-time-laptop")
 
 ### Bytes were allocated per operation
-<table>
-  <tr>
-    <td>Docker Container</td>
-     <td>Laptop</td>
-  </tr>
-  <tr>
-    <td><img src="resources/bytes-operation-docker.png" width=550 height=480></td>
-    <td><img src="resources/bytes-operation-laptop.png" width=550 height=480></td>
-  </tr>
- </table>
+####  Docker Container
+![bytes-operation-docker](resources/bytes-operation-docker.png "bytes-operation-docker")
+####  Laptop
+![bytes-operation-laptop](resources/bytes-operation-laptop.png "bytes-operation-laptop")
 
 ### Memory allocations occurred per operation
-<table>
-  <tr>
-    <td>Docker Container</td>
-     <td>Laptop</td>
-  </tr>
-  <tr>
-    <td><img src="resources/memory-operation-docker.png" width=550 height=480></td>
-    <td><img src="resources/memory-operation-laptop.png" width=550 height=480></td>
-  </tr>
- </table>
+####  Docker Container
+![memory-operation-docker](resources/memory-operation-docker.png "memory-operation-docker")
+####  Laptop
+![memory-operation-laptop](resources/memory-operation-laptop.png "memory-operation-laptop")
 
 ### Total number of times the loop was executed
-<table>
-  <tr>
-    <td>Docker Container</td>
-     <td>Laptop</td>
-  </tr>
-  <tr>
-    <td><img src="resources/number-loops-docker.png" width=550 height=480></td>
-    <td><img src="resources/number-loops-laptop.png" width=550 height=480></td>
-  </tr>
- </table>
+####  Docker Container
+![number-loops-docker](resources/number-loops-docker.png "number-loops-docker")
+####  Laptop
+![number-loops-laptop](resources/number-loops-laptop.png "number-loops-laptop")
 
 ### Analysis
 
