@@ -27,7 +27,7 @@ func ReadFiles(nameFile string, sizeMatrix int) ([][]int, [][]int, [][]int) {
 
 	file, err := os.Open(nameFile)
 	if err != nil {
-		log.Println(err)
+		log.Panic(err)
 	}
 
 	defer file.Close()
@@ -65,7 +65,7 @@ func ReadFiles(nameFile string, sizeMatrix int) ([][]int, [][]int, [][]int) {
 			for ind, value := range strings.Fields(scanner.Text()) {
 				parsedValue, errParseInt := strconv.Atoi(value)
 				if errParseInt != nil {
-					log.Println(err)
+					log.Panic(err)
 				}
 
 				matrixA[contRow][ind] = parsedValue
@@ -76,7 +76,7 @@ func ReadFiles(nameFile string, sizeMatrix int) ([][]int, [][]int, [][]int) {
 			for ind, value := range strings.Fields(scanner.Text()) {
 				parsedValue, errParseInt := strconv.Atoi(value)
 				if errParseInt != nil {
-					log.Println(err)
+					log.Panic(err)
 				}
 
 				matrixB[contRow][ind] = parsedValue
@@ -87,7 +87,7 @@ func ReadFiles(nameFile string, sizeMatrix int) ([][]int, [][]int, [][]int) {
 			for ind, value := range strings.Fields(scanner.Text()) {
 				parsedValue, errParseInt := strconv.Atoi(value)
 				if errParseInt != nil {
-					log.Println(err)
+					log.Panic(err)
 				}
 
 				matrixSolution[contRow][ind] = parsedValue
@@ -98,7 +98,7 @@ func ReadFiles(nameFile string, sizeMatrix int) ([][]int, [][]int, [][]int) {
 	}
 
 	if err := scanner.Err(); err != nil {
-		log.Println(err)
+		log.Panic(err)
 	}
 
 	return matrixA, matrixB, matrixSolution
